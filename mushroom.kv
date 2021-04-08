@@ -18,7 +18,7 @@ WindowManager:
 		Rectangle:
 			pos: self.pos
 			size: self.size
-			source: 'appimages/forest.jpg'
+			source: 'appimages/mushrooms.jpg'
 	
 	FloatLayout:
 		pos: 0, 0
@@ -28,7 +28,7 @@ WindowManager:
 			text: "Check if your mushroom is poisonous!"
 			font_size: 45
 			outline_color: 0, 0, 0
-			outline_width: 2
+			outline_width: 3
 			text_size: root.width, None
 			size: self.texture_size
 			halign: 'center'
@@ -612,8 +612,3 @@ WindowManager:
 		on_release:
 			app.root.current = "habitatwindow"
 			root.manager.transition.direction = "right"
-
-
-
-			
-	
