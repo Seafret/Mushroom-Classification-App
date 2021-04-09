@@ -171,7 +171,7 @@ WindowManager:
 		
 	Label:
 		text:
-			"To check if your mushroom bruises, nick the top and bottom of your mushroom cap and if it changes colour where nicked your mushroom has bruised."
+			"To check if your mushroom bruises, nick the top and bottom of your mushroom cap and if the colour changes where you nicked it then your mushroom has bruised."
 		pos_hint: {'x': 0, 'y': 0.35}
 		text_size: root.width, None
 		size: self.texture_size
@@ -532,7 +532,7 @@ WindowManager:
 		pos_hint: {'x': 0, 'y': .25}
 		
 	Label:
-		text: "Cap Shape: " + root.manager.my_cap_shape
+		text: "Bruises: " + root.manager.my_bruises
 		pos_hint: {'x': 0, 'y': .21}
 		
 	Label:
@@ -540,16 +540,12 @@ WindowManager:
 		pos_hint: {'x': 0, 'y': .17}
 		
 	Label:
-		text: "Bruises: " + root.manager.my_bruises
+		text: "Stalk Root: " + root.manager.my_stalk_root
 		pos_hint: {'x': 0, 'y': .13}
 		
 	Label:
-		text: "Stalk Root: " + root.manager.my_stalk_root
-		pos_hint: {'x': 0, 'y': .09}
-		
-	Label:
 		text: "Habitat: " + root.manager.my_habitat
-		pos_hint: {'x': 0, 'y': .05}
+		pos_hint: {'x': 0, 'y': .09}
 	
 	Button:
 		text: "Back"
