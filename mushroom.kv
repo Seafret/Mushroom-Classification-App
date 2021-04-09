@@ -63,7 +63,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (0.588,0.294,0,0.7)
 		background_normal: ''
-		on_release: root.ccselection('brown')
+		on_release: root.ccselection('brown', 'n')
 		
 	Button:
 		text: "buff"
@@ -72,7 +72,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (0.941,0.863,0.51,0.8)
 		background_normal: ''
-		on_release: root.ccselection('buff')
+		on_release: root.ccselection('buff', 'b')
 		
 	Button:
 		text: "cinnamon"
@@ -80,7 +80,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (0.824,0.412,0.118,0.7)
 		background_normal: ''
-		on_release: root.ccselection('cinnamon')
+		on_release: root.ccselection('cinnamon', 'c')
 		
 	Button:
 		text: "grey"
@@ -89,7 +89,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (0.502,0.502,0.502,1)
 		background_normal: ''
-		on_release: root.ccselection('grey')
+		on_release: root.ccselection('grey', 'g')
 		
 	Button:
 		text: "green"
@@ -97,7 +97,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (0,1,0,0.5)
 		background_normal: ''
-		on_release: root.ccselection('green')
+		on_release: root.ccselection('green', 'r')
 		
 	Button:
 		text: "pink"
@@ -105,7 +105,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (0.969,0.561,0.655,0.8)
 		background_normal: ''
-		on_release: root.ccselection('pink')
+		on_release: root.ccselection('pink', 'p')
 		
 	Button:
 		text: "purple"
@@ -113,7 +113,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (0.502,0,0.502,0.5)
 		background_normal: ''
-		on_release: root.ccselection('purple')
+		on_release: root.ccselection('purple', 'u')
 		
 	Button:
 		text: "red"
@@ -121,7 +121,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (1,0,0,0.7)
 		background_normal: ''
-		on_release: root.ccselection('red')
+		on_release: root.ccselection('red', 'e')
 		
 	Button:
 		text: "white"
@@ -130,7 +130,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (1,1,1,0.9)
 		background_normal: ''
-		on_release: root.ccselection('white')
+		on_release: root.ccselection('white', 'w')
 		
 	Button:
 		text: "yellow"
@@ -139,7 +139,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (1,0.788,0.133,0.8)
 		background_normal: ''
-		on_release: root.ccselection('yellow')
+		on_release: root.ccselection('yellow', 'y')
 	
 	Button:
 		text: "Back"
@@ -188,7 +188,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (0.165,0.322,0.745,0.7)
 		background_normal: ''
-		on_release: root.bselection('true')
+		on_release: root.bselection('yes', 't')
 		
 	Button:
 		text: "No"
@@ -197,7 +197,7 @@ WindowManager:
 		size_hint: .2, .1
 		background_color: (1,1,1,0.9)
 		background_normal: ''
-		on_release: root.bselection('false')
+		on_release: root.bselection('no', 'f')
 	
 	Button:
 		text: "Back"
@@ -235,7 +235,7 @@ WindowManager:
 		pos_hint: {'x': .2, 'y': .6}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.gaselection('attached')
+		on_release: root.gaselection('attached', 'a')
 		Image:
 			source: 'appimages/attached.png'
 			center_x: self.parent.center_x
@@ -246,7 +246,7 @@ WindowManager:
 		pos_hint: {'x': .5, 'y': .6}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.gaselection('descending')
+		on_release: root.gaselection('descending', 'd')
 		Image:
 			source: 'appimages/descending.png'
 			center_x: self.parent.center_x
@@ -257,7 +257,7 @@ WindowManager:
 		pos_hint: {'x': .2, 'y': .3}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.gaselection('free')
+		on_release: root.gaselection('free', 'f')
 		Image:
 			source: 'appimages/free.png'
 			center_x: self.parent.center_x
@@ -268,7 +268,7 @@ WindowManager:
 		pos_hint: {'x': .5, 'y': .3}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.gaselection('notched')
+		on_release: root.gaselection('notched', 'n')
 		Image:
 			source: 'appimages/notched.png'
 			center_x: self.parent.center_x
@@ -311,7 +311,7 @@ WindowManager:
 		pos_hint: {'x': .05, 'y': .6}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.srselection('bulbous')
+		on_release: root.srselection('bulbous', 'b')
 		Image:
 			source: 'appimages/bulbous.png'
 			center_x: self.parent.center_x
@@ -322,7 +322,7 @@ WindowManager:
 		pos_hint: {'x': .35, 'y': .6}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.srselection('club')
+		on_release: root.srselection('club', 'c')
 		Image:
 			source: 'appimages/club.png'
 			center_x: self.parent.center_x
@@ -333,7 +333,7 @@ WindowManager:
 		pos_hint: {'x': .65, 'y': .6}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.srselection('cup')
+		on_release: root.srselection('cup', 'u')
 		Image:
 			source: 'appimages/cup.png'
 			center_x: self.parent.center_x
@@ -344,7 +344,7 @@ WindowManager:
 		pos_hint: {'x': .05, 'y': .3}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.srselection('equal')
+		on_release: root.srselection('equal', 'e')
 		Image:
 			source: 'appimages/equal.png'
 			center_x: self.parent.center_x
@@ -355,7 +355,7 @@ WindowManager:
 		pos_hint: {'x': .35, 'y': .3}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.srselection('rhizomorphs')
+		on_release: root.srselection('rhizomorphs', 'z')
 		Image:
 			source: 'appimages/rhizomorphs.png'
 			center_x: self.parent.center_x
@@ -366,7 +366,7 @@ WindowManager:
 		pos_hint: {'x': .65, 'y': .3}
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
-		on_release: root.srselection('rooted')
+		on_release: root.srselection('rooted', 'r')
 		Image:
 			source: 'appimages/rooted.png'
 			center_x: self.parent.center_x
@@ -377,7 +377,7 @@ WindowManager:
 		text: "Unknown"
 		pos_hint: {'x': .4, 'y': .2}
 		size_hint: .2, .1
-		on_release: root.srselection('missing')
+		on_release: root.srselection('missing', '?')
 	
 	Button:
 		text: "Back"
@@ -416,7 +416,7 @@ WindowManager:
 		size_hint: .3, .3
 		background_color: (0.553,0.714,0,0.8)
 		background_normal: ''
-		on_release: root.hselection('grasses')
+		on_release: root.hselection('grasses', 'g')
 		Image:
 			source: 'appimages/grasses.png'
 			center_x: self.parent.center_x
@@ -429,7 +429,7 @@ WindowManager:
 		size_hint: .3, .3
 		background_color: (0.941,0.863,0.51,0.8)
 		background_normal: ''
-		on_release: root.hselection('leaves')
+		on_release: root.hselection('leaves', 'l')
 		Image:
 			source: 'appimages/leaves.jpg'
 			center_x: self.parent.center_x
@@ -442,7 +442,7 @@ WindowManager:
 		size_hint: .3, .3
 		background_color: (0.553,0.714,0,0.8)
 		background_normal: ''
-		on_release: root.hselection('meadows')
+		on_release: root.hselection('meadows', 'm')
 		Image:
 			source: 'appimages/meadows.jpg'
 			center_x: self.parent.center_x
@@ -455,7 +455,7 @@ WindowManager:
 		size_hint: .3, .3
 		background_color: (0.553,0.714,0,0.3)
 		background_normal: ''
-		on_release: root.hselection('paths')
+		on_release: root.hselection('paths', 'p')
 		Image:
 			source: 'appimages/pathes.jpg'
 			center_x: self.parent.center_x
@@ -468,7 +468,7 @@ WindowManager:
 		size_hint: .3, .3
 		background_color: (1,1,1,0.3)
 		background_normal: ''
-		on_release: root.hselection('urban')
+		on_release: root.hselection('urban', 'u')
 		Image:
 			source: 'appimages/urban.jpg'
 			center_x: self.parent.center_x
@@ -481,7 +481,7 @@ WindowManager:
 		size_hint: .3, .3
 		background_color: (0.969,0.561,0.655,0.8)
 		background_normal: ''
-		on_release: root.hselection('waste')
+		on_release: root.hselection('waste', 'w')
 		Image:
 			source: 'appimages/waste.jpg'
 			center_x: self.parent.center_x
@@ -495,7 +495,7 @@ WindowManager:
 		size_hint: .3, .3
 		background_color: (0.165,0.376,0.231,0.9)
 		background_normal: ''
-		on_release: root.hselection('woods')
+		on_release: root.hselection('woods', 'd')
 		Image:
 			source: 'appimages/woods.jpg'
 			pos: self.parent.pos
@@ -546,6 +546,11 @@ WindowManager:
 	Label:
 		text: "Habitat: " + root.manager.my_habitat
 		pos_hint: {'x': 0, 'y': .09}
+		
+	Label:
+		id: prediction
+		text: ''
+		pos_hint: {'x': 0, 'y': .01}
 	
 	Button:
 		text: "Back"
@@ -554,3 +559,10 @@ WindowManager:
 		on_release:
 			app.root.current = "habitatwindow"
 			root.manager.transition.direction = "right"
+			root.clearpredict()
+	
+	Button:
+		text: "Predict"
+		pos_hint: {'x': .4, 'y': .2}
+		size_hint: .2, .1
+		on_release: root.predictmush()
