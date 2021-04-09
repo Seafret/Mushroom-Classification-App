@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+A mushroom classification app, using the Kivy library
+and machine learning models.
+
 Created on Wed Mar 31 16:01:10 2021
 
 @author: jarogi
-@version: 2.0
+@version: 2.1
 """
 
 # import statements
@@ -11,9 +14,6 @@ import kivy
 kivy.require('2.0.0')
 from kivy.app import App
 from kivy.lang import Builder
-#from kivy.uix.label import Label
-#from kivy.uix.button import Button
-#from kivy.uix.widget import Widget
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import StringProperty
 
@@ -29,16 +29,6 @@ class CapColorWindow(Screen):
         #if capcol == 'blue':
             #self.manager.my_cap_color = 'BLUE'
         #self.ids.result0.text=capcolout
-
-# Cap Shape Window
-class CapShapeWindow(Screen):
-    def csselection(self,capsha):
-        #capshaout = "You clicked the "+capsha+" button!"
-        if capsha == 'convex':
-            self.manager.my_cap_shape = 'CONVEX'
-        else:
-            self.manager.my_cap_shape = 'CONICAL'
-        #self.ids.result1.text=capshaout
 
 # Bruises Window
 class BruisesWindow(Screen):
