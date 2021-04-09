@@ -3,9 +3,8 @@
 WindowManager:
 	StartWindow:
 	CapColorWindow:
-	CapShapeWindow:
-	GillAttachmentWindow:
 	BruisesWindow:
+	GillAttachmentWindow:
 	StalkRootWindow:
 	HabitatWindow:
 	SummaryWindow:
@@ -155,62 +154,9 @@ WindowManager:
 		pos_hint: {'x': .7, 'y': .1}
 		size_hint: .2, .1
 		on_release:
-			app.root.current = "capshapewindow"
-			root.manager.transition.direction = "left"
-
-<CapShapeWindow>:
-	id: capshapewindow
-	name: "capshapewindow"
-	
-	Label:
-		text: "Select the cap shape of your mushroom."
-		pos_hint: {'x': 0, 'y': 0.45}
-		text_size: root.width, None
-		size: self.texture_size
-		halign: 'center'
-		
-	Label:
-		id: result1
-		text: ''
-		pos_hint: {'x': 0, 'y': .25}
-		
-	Button:
-		pos_hint: {'x': .1, 'y': .6}
-		size_hint: .2, .1
-		background_color: (1,0,0,0)
-		on_release: root.csselection('convex')
-		Image:
-			source: 'appimages/convex.png'
-			center_x: self.parent.center_x
-			center_y: self.parent.center_y
-			allow_stretch: False
-		
-	Button:
-		pos_hint: {'x': .4, 'y': .6}
-		size_hint: .2, .1
-		background_color: (0,0,1,0)
-		on_release: root.csselection('conical')
-		Image:
-			source: 'appimages/conical.png'
-			center_x: self.parent.center_x
-			center_y: self.parent.center_y
-			allow_stretch: False
-	
-	Button:
-		text: "Back"
-		pos_hint: {'x': .1, 'y': .1}
-		size_hint: .2, .1
-		on_release:
-			app.root.current = "capcolorwindow"
-			root.manager.transition.direction = "right"
-	
-	Button:
-		text: "Next"
-		pos_hint: {'x': .7, 'y': .1}
-		size_hint: .2, .1
-		on_release:
 			app.root.current = "bruiseswindow"
 			root.manager.transition.direction = "left"
+
 			
 <BruisesWindow>:
 	id: bruiseswindow
@@ -258,7 +204,83 @@ WindowManager:
 		pos_hint: {'x': .1, 'y': .1}
 		size_hint: .2, .1
 		on_release:
-			app.root.current = "capshapewindow"
+			app.root.current = "capcolorwindow"
+			root.manager.transition.direction = "right"
+	
+	Button:
+		text: "Next"
+		pos_hint: {'x': .7, 'y': .1}
+		size_hint: .2, .1
+		on_release:
+			app.root.current = "gillattachmentwindow"
+			root.manager.transition.direction = "left"
+			
+<GillAttachmentWindow>:
+	id: gillattachmentwindow
+	name: "gillattachmentwindow"
+	
+	Label:
+		text: "Select the gill attachment of your mushroom."
+		pos_hint: {'x': 0, 'y': 0.45}
+		text_size: root.width, None
+		size: self.texture_size
+		halign: 'center'
+		
+	Label:
+		id: result2
+		text: ''
+		pos_hint: {'x': 0, 'y': .25}
+		
+	Button:
+		pos_hint: {'x': .2, 'y': .6}
+		size_hint: .3, .3
+		background_color: (1,1,1,0.3)
+		on_release: root.gaselection('attached')
+		Image:
+			source: 'appimages/attached.png'
+			center_x: self.parent.center_x
+			center_y: self.parent.center_y
+			allow_stretch: True
+		
+	Button:
+		pos_hint: {'x': .5, 'y': .6}
+		size_hint: .3, .3
+		background_color: (1,1,1,0.3)
+		on_release: root.gaselection('descending')
+		Image:
+			source: 'appimages/descending.png'
+			center_x: self.parent.center_x
+			center_y: self.parent.center_y
+			allow_stretch: True
+			
+	Button:
+		pos_hint: {'x': .2, 'y': .3}
+		size_hint: .3, .3
+		background_color: (1,1,1,0.3)
+		on_release: root.gaselection('free')
+		Image:
+			source: 'appimages/free.png'
+			center_x: self.parent.center_x
+			center_y: self.parent.center_y
+			allow_stretch: True
+			
+	Button:
+		pos_hint: {'x': .5, 'y': .3}
+		size_hint: .3, .3
+		background_color: (1,1,1,0.3)
+		on_release: root.gaselection('notched')
+		Image:
+			source: 'appimages/notched.png'
+			center_x: self.parent.center_x
+			center_y: self.parent.center_y
+			allow_stretch: True
+	
+	Button:
+		text: "Back"
+		pos_hint: {'x': .1, 'y': .1}
+		size_hint: .2, .1
+		on_release:
+			app.root.current = "bruiseswindow"
 			root.manager.transition.direction = "right"
 	
 	Button:
@@ -362,83 +384,7 @@ WindowManager:
 		pos_hint: {'x': .1, 'y': .1}
 		size_hint: .2, .1
 		on_release:
-			app.root.current = "bruiseswindow"
-			root.manager.transition.direction = "right"
-	
-	Button:
-		text: "Next"
-		pos_hint: {'x': .7, 'y': .1}
-		size_hint: .2, .1
-		on_release:
 			app.root.current = "gillattachmentwindow"
-			root.manager.transition.direction = "left"
-			
-<GillAttachmentWindow>:
-	id: gillattachmentwindow
-	name: "gillattachmentwindow"
-	
-	Label:
-		text: "Select the gill attachment of your mushroom."
-		pos_hint: {'x': 0, 'y': 0.45}
-		text_size: root.width, None
-		size: self.texture_size
-		halign: 'center'
-		
-	Label:
-		id: result2
-		text: ''
-		pos_hint: {'x': 0, 'y': .25}
-		
-	Button:
-		pos_hint: {'x': .2, 'y': .6}
-		size_hint: .3, .3
-		background_color: (1,1,1,0.3)
-		on_release: root.gaselection('attached')
-		Image:
-			source: 'appimages/attached.png'
-			center_x: self.parent.center_x
-			center_y: self.parent.center_y
-			allow_stretch: True
-		
-	Button:
-		pos_hint: {'x': .5, 'y': .6}
-		size_hint: .3, .3
-		background_color: (1,1,1,0.3)
-		on_release: root.gaselection('descending')
-		Image:
-			source: 'appimages/descending.png'
-			center_x: self.parent.center_x
-			center_y: self.parent.center_y
-			allow_stretch: True
-			
-	Button:
-		pos_hint: {'x': .2, 'y': .3}
-		size_hint: .3, .3
-		background_color: (1,1,1,0.3)
-		on_release: root.gaselection('free')
-		Image:
-			source: 'appimages/free.png'
-			center_x: self.parent.center_x
-			center_y: self.parent.center_y
-			allow_stretch: True
-			
-	Button:
-		pos_hint: {'x': .5, 'y': .3}
-		size_hint: .3, .3
-		background_color: (1,1,1,0.3)
-		on_release: root.gaselection('notched')
-		Image:
-			source: 'appimages/notched.png'
-			center_x: self.parent.center_x
-			center_y: self.parent.center_y
-			allow_stretch: True
-	
-	Button:
-		text: "Back"
-		pos_hint: {'x': .1, 'y': .1}
-		size_hint: .2, .1
-		on_release:
-			app.root.current = "stalkrootwindow"
 			root.manager.transition.direction = "right"
 	
 	Button:
@@ -561,7 +507,7 @@ WindowManager:
 		pos_hint: {'x': .1, 'y': .1}
 		size_hint: .2, .1
 		on_release:
-			app.root.current = "gillattachmentwindow"
+			app.root.current = "stalkrootwindow"
 			root.manager.transition.direction = "right"
 			
 	Button:
